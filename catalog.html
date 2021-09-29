@@ -36,9 +36,9 @@
 		</header>
 		<main>
 			<h1 class="visually-hidden">Гостиницы Седоны</h1>
-            <ul class="breadcrumps">
-                <li class="breadcrumps-item"><a class="breadcrumps-home" href="index.html">Главная</a></li>
-                <li class="breadcrumps-item"><a class="breadcrumps-catalog">Гостиницы</a></li>
+            <ul class="breadcrumbs-list">
+                <li class="breadcrumbs-item"><a class="breadcrumbs-home" href="index.html">Главная</a></li>
+                <li class="breadcrumbs-item"><a class="breadcrumbs-catalog">Гостиницы</a></li>
             </ul>
             <section class="filter">
 				<h2 class="visually-hidden">Фильтры для поиска жилья</h2>
@@ -86,82 +86,88 @@
 						<input type="range" min="0" max="10000" step="1000" value="0" name="cost-min-input" id="cost-min-input">
 						<input type="range" min="0" max="10000" step="1000" value="9000" name="cost-max-input" id="cost-max-input">
                     </fieldset>
-					<input type="submit" value="Применить">
-					<input type="reset" value="Сбросить">
+					<button class="filter-submit" type="submit">Применить</button>
+					<button class="filter-reset" type="reset">Сбросить</button>
                 </form>
             </section>
 			<section class="result">
 				<h2 class="visually-hidden">Результаты поиска</h2>
 				<div class="sorting">
 					<p>Найдено гостиниц:<span class="quantity">38</span></p>
-					<form class="sorting-the-list" action="#" method="GET">
+					<form class="sort-list" action="#" method="GET">
 						<select name="sort">
 							<option value="low-cost">Сначала дешевые</option>
 							<option value="costly">Сначала дорогие</option>
 							<option value="high-rating">С высоким рейтингом</option>							
 						</select>
 						<div class="display-mode">
-							<button type="button" name="view-line">Вывести результат строкой</button>
-							<button type="button" name="view-column">Вывести результат в столбце</button>
-							<button type="button" name="view-list">Вывести результат списком</button>
+							<a class="display-mode-btn btn-view-line" href="#">Вывести результат строкой</a>
+							<a class="display-mode-btn btn-view-column" href="#">Вывести результат в столбце</a>
+							<a class="display-mode-btn btn-view-list" href="#">Вывести результат списком</a>
 						</div>
 					</form>
 				</div>
 				<section class="list-of-hotels">
 					<h2 class="visually-hidden">Гостиницы по Вашим предпочтениям</h2>
 					<article>
-						<div class="left-column">
-							<h3>Amara Resort & Spa</h3>
+						<div class="image-column">
 							<img src="image/amara-resort-spa.png" width="180" height="120" alt="Гостиница Amara Resort & Spa">
+						</div>
+						<div class="description-column">
+							<h3>Amara Resort & Spa</h3>
 							<span class="type">Гостиница</span>
 							<span class="cost">От 4000 &#8381;</span>
 							<a class="more-details" href="#">Подробнее</a>
 							<button type="button" name="add-to-favorites">В избранное</button>
 						</div>
-						<div class="right-column">
+						<div class="rating-column">
 							<span class="hotel-class">4 звезды</span>
 							<span class="rating">Рейтинг: 8,5</span>
 						</div>
 					</article>
 					<article>
-						<div class="left-column">
-							<h3>Desert Quail Inn</h3>
+						<div class="image-column">
 							<img src="image/desert-quail-inn.png" width="180" height="120" alt="Мотель Desert Quail Inn">
+						</div>
+						<div class="description-column">
+							<h3>Desert Quail Inn</h3>
 							<span class="type">Мотель</span>
 							<span class="cost">От 3000 &#8381;</span>
 							<a class="more-details" href="#">Подробнее</a>
-							<!-- Кнопки нет на макете. Возможно ошибка. -->
-							<!-- <button type="button" name="add-to-favorites">В избранное</button> -->
 						</div>
-						<div class="right-column">
+						<div class="rating-column">
 							<span class="hotel-class">3 звезды</span>
 							<span class="rating">Рейтинг: 8,9</span>
 						</div>
 					</article>
 					<article>
-						<div class="left-column">
-							<h3>Villas at Poco Diablo</h3>
+						<div class="image-column">
 							<img src="image/villas-at-poco-diablo.png" width="180" height="120" alt="Апартаменты Villas at Poco Diablo">
-							<span class="type">Гостиница</span>
+						</div>
+						<div class="description-column">
+							<h3>Villas at Poco Diablo</h3>
+							<span class="type">Апартаменты</span>
 							<span class="cost">От 2000 &#8381;</span>
 							<a class="more-details" href="#">Подробнее</a>
 							<button class="favourites" type="button" name="add-to-favorites">В избранном</button>
 						</div>
-						<div class="right-column">
+						<div class="rating-column">
 							<span class="hotel-class">2 звезды</span>
 							<span class="rating">Рейтинг: 9,2</span>
 						</div>
 					</article>
 					<article>
-						<div class="left-column">
-							<h3>GreenTree Inn</h3>
+						<div class="image-column">
 							<img src="image/greentree-inn.png" width="180" height="120" alt="Гостиница GreenTree Inn">
+						</div>
+						<div class="description-column">
+							<h3>GreenTree Inn</h3>
 							<span class="type">Гостиница</span>
 							<span class="cost">От 3000 &#8381;</span>
 							<a class="more-details" href="#">Подробнее</a>
-							<button type="button" name="add-to-favorites">В избранное</button>
+							<button class="favourites" type="button" name="add-to-favorites">В избранное</button>
 						</div>
-						<div class="right-column">
+						<div class="rating-column">
 							<span class="hotel-class">2 звезды</span>
 							<span class="rating">Рейтинг: 9,2</span>
 						</div>
@@ -169,21 +175,21 @@
 					<button type="button">Загрузить ещё</button>
 				</section>
 				<ul class="pagination-list">
-					<li class="pagination-item"><a href="#">1</a></li>
+					<li class="pagination-item pagination-item-current"><a href="#">1</a></li>
 					<li class="pagination-item"><a href="#">2</a></li>
 					<li class="pagination-item"><a href="#">3</a></li>
 					<li class="pagination-item"><a href="#">4</a></li>
 					<li class="pagination-item"><a href="#">...</a></li>
 					<li class="pagination-item"><a href="#">10</a></li>
 				</ul>
-				<label>
+				<div class="quantity-hotels">
 					<span>Гостиниц на странице:</span>
-					<select name="quantity-of-hotels">
+					<select name="quantity-hotels">
 						<option value="4">4</option>
-						<option value="4">6</option>
-						<option value="4">8</option>
+						<option value="6">6</option>
+						<option value="8">8</option>
 					</select>
-				</label>
+				</div>
 			</section>
 		</main>
 		<footer class="main-footer">
@@ -192,7 +198,7 @@
 				<p>Только полезная информация и никакого спама,	честное бойскаутское!</p>
 				<form action="#" method="POST">
 					<input type="email" name="email" placeholder="Ваш e-mail">
-					<input type="submit" value="Подписаться">	
+					<button class="subscribe-submit" type="submit">Подписаться</button>	
 				</form>
 			</section>
 			<ul class="social-list">

@@ -9,30 +9,24 @@
 	<body>
 		<header class="main-header">			
 			<a class="logo-link"><img class="logo" src="image/logo-sedona.png" alt="Логотип Седона" width="138" height="70"></a>			
-			<nav class="navigation">
-				<ul class="navigation-list">
-					<li class="navigation-item">
-						<a class="navigation-link">Главная</a>
+			<nav class="main-nav">
+				<ul class="main-nav-list">
+					<li class="main-nav-item">
+						<a class="main-nav-link">Главная</a>
 					</li>
-					<li class="navigation-item">
-						<a class="navigation-link" href="#">О Седоне</a>
+					<li class="main-nav-item">
+						<a class="main-nav-link" href="#">О Седоне</a>
 					</li>
-					<li class="navigation-item">
-						<a class="navigation-link" href="catalog.html">Гостиницы</a>
+					<li class="main-nav-item">
+						<a class="main-nav-link" href="catalog.html">Гостиницы</a>
 					</li>
-				</ul>
-				<ul class="user-tools-list">
-					<li class="user-tools-item">
-						<a href="#">Поиск</a>
-					</li>
-					<li class="user-tools-item">
-						<a href="#">Избранное</a>
-					</li>
-					<li class="user-tools-item">
-						<a href="#">Хочу сюда!</a>
-					</li>
-				</ul>
+				</ul>				
 			</nav>
+			<div class="user-tools">				
+				<a class="user-search" href="#">Поиск</a>
+				<a class="user-favourites" href="#">Избранное</a>
+				<a class="user-catalog" href="#">Хочу сюда!</a>
+			</div>
 		</header>
 		<main>
 			<h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
@@ -92,7 +86,7 @@
 				<p>Только полезная информация и никакого спама,	честное бойскаутское!</p>
 				<form action="#" method="POST">
 					<input type="email" name="email" placeholder="Ваш e-mail">
-					<input type="submit" value="Подписаться">	
+					<button class="subscribe-submit" type="submit">Подписаться</button>
 				</form>
 			</section>
 			<ul class="social-list">
@@ -105,13 +99,9 @@
 				<li class="social-item">
 					<a class="social-link social-link-youtube" href="https://www.instagram.com/htmlacademy/">Инстаграм</a>
 				</li>
-			</ul>
-			<address>
-				<a class="tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
-			</address>
-			<div class="copyright">
-				<a href="https://htmlacademy.ru/">HTML Academy</a>
-			</div>
+			</ul>			
+			<a class="contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+			<a class="copyright" href="https://htmlacademy.ru/">HTML Academy</a>
 		</footer>
 	</body>
 </html>
