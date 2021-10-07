@@ -134,7 +134,7 @@ body {
   height: 18px;
   left: 24px;
   top: 2px;
-  background-image: url("../image/header/search.svg");
+  background-image: url("../image/svg/search.svg");
   background-size: 18px 18px;
   background-repeat: no-repeat;
 }
@@ -153,7 +153,7 @@ body {
   height: 17px;
   left: 5px;
   top: 2px;
-  background-image: url("../image/header/favourites.svg");
+  background-image: url("../image/svg/favourites.svg");
   background-size: 18px 17px;
   background-repeat: no-repeat;
 }
@@ -196,8 +196,12 @@ body {
   padding-bottom: 82px;
   padding-left: 50px; /* Цифра из головы для безопасного расстояния */
   color: #fff;
-  background: url("../image/promo/promo-bg.jpg") center no-repeat #000;
-  text-align: center;
+  background-color: #30414a;
+  background-image: 
+    url("../image/svg/promo-decorative.svg"),  
+    url("../image/decorative/promo-bg.jpg");
+  background-position: bottom, center;
+  background-repeat: no-repeat;
 }
 
 .promo figure {
@@ -333,7 +337,7 @@ body {
   top: -9px;
   width: 74px;
   height: 72px;
-  background-image: url(../image/features/features-home.svg);
+  background-image: url(../image/svg/features-home.svg);
   background-size: 74px 72px;
 }
 
@@ -342,7 +346,7 @@ body {
   top: -7px;
   width: 74px;
   height: 70px;
-  background-image: url(../image/features/features-food.svg);
+  background-image: url(../image/svg/features-food.svg);
   background-size: 74px 70px;
 }
 
@@ -351,7 +355,7 @@ body {
   top: -13px;
   width: 64px;
   height: 76px;
-  background-image: url(../image/features/features-souvenirs.svg);
+  background-image: url(../image/svg/features-souvenirs.svg);
   background-size: 64px 76px;
 }
 
@@ -410,8 +414,8 @@ body {
   padding-bottom: 94px;
   padding-left: 200px;
   color: #fff;
-  background-color: #000;
-  background-image: url(../image/subscribe/subscribe-bg.jpg);
+  background-color: #7f6661;
+  background-image: url(../image/decorative/subscribe-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
@@ -499,50 +503,38 @@ body {
 
 .social-item {
   margin-right: 29px;
-  padding-right: 20px;
 }
 
 .social-link {
-  position: relative;
   font-size: 0;
+  display: flex;
+}
+
+.social-icon {
+  margin: 0;
+}
+
+.social-icon-tw {
+  width: 18px;
+  height: 15px;
+}
+
+.social-icon-fb {
+  width: 10px;
+  height: 18px;
+}
+
+.social-icon-inst {
+  width: 20px;
+  height: 16px;
 }
 
 .social-item:last-of-type {
   margin-right: 0;
 }
 
-.social-link::before {
-  position: absolute;
-  content: "";
-  background-repeat: no-repeat;
-  top: -13px;
-}
-
-.social-link-twitter::before {
-  width: 18px;
-  height: 15px;
-  left: 0;
-  background-image: url(../image/footer/social-tw.svg);
-  background-size: 18px 15px;
-}
-
-.social-link-facebook::before {
-  width: 10px;
-  height: 18px;
-  left: -2px;
-  background-image: url(../image/footer/social-fb.svg);
-  background-size: 10px 18px;
-}
-
-.social-link-youtube::before {
-  width: 20px;
-  height: 16px;
-  left: -11px;
-  background-image: url(../image/footer/social-yt.svg);
-  background-size: 20px 16px;
-}
-
 .contact-phone {
+  margin: 0 auto;
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
@@ -556,14 +548,13 @@ body {
 .catalog-head-wrapper {
   padding-top: 32px;
   padding-right: 71px;
-  padding-bottom: 83px;
+  padding-bottom: 84px;
   padding-left: 71px;
-  background-color: #000;
+  background-color: #6b6a73;
   color: #fff;
-  background-image: url(../image/catalog/catalog-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; /* Почему не работает? */
+  background-image: url(../image/decorative/catalog-bg.jpg);
+  background-repeat: no-repeat;  
+  background-size: auto;
 }
 
 h1 {
@@ -597,7 +588,7 @@ h1 {
   height: 8px;
   top: 7px;
   right: 1px;  
-  background-image: url(../image/catalog/breadcrumbs-arrow.svg);
+  background-image: url(../image/svg/breadcrumbs-arrow.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 5px 8px;
@@ -623,7 +614,7 @@ h1 {
   height: 12px;
   top: -13px;
   left: 2px;
-  background-image: url(../image/catalog/breadcrumbs-home.svg);
+  background-image: url(../image/svg/breadcrumbs-home.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px 12px;
@@ -699,14 +690,14 @@ h1 {
 }
 
 .filter-infrastructure input:checked + .custom-check {
-  background-image: url(../image/catalog/check.svg);
+  background-image: url(../image/svg/check.svg);
   background-repeat: no-repeat;
   background-size: 12px 10px;
   background-position: center;
 }
 
 .filter-housing input:checked + .custom-radio {
-  background-image: url(../image/catalog/radio.svg);
+  background-image: url(../image/svg/radio.svg);
   background-repeat: no-repeat;
   background-size: 10px 10px;
   background-position: center;
@@ -801,21 +792,21 @@ h1 {
 }
 
 .btn-view-line {
-  background-image: url(../image/catalog/pages-line.svg);
+  background-image: url(../image/svg/pages-line.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 14px;
 }
 
 .btn-view-column {
-  background-image: url(../image/catalog/pages-column.svg);
+  background-image: url(../image/svg/pages-column.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 14px;
 }
 
 .btn-view-list {
-  background-image: url(../image/catalog/pages-list.svg);
+  background-image: url(../image/svg/pages-list.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 14px;
