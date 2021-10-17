@@ -13,13 +13,13 @@
 				<nav class="main-nav">
 					<ul class="main-nav-list">
 						<li class="main-nav-item">
-							<a class="main-nav-link main-nav-link-active">Главная</a>
+							<a class="main-nav-link" href="index.html">Главная</a>
 						</li>
 						<li class="main-nav-item">
 							<a class="main-nav-link" href="#">О Седоне</a>
 						</li>
 						<li class="main-nav-item">
-							<a class="main-nav-link" href="catalog.html">Гостиницы</a>
+							<a class="main-nav-link main-nav-link-active" href="catalog.html">Гостиницы</a>
 						</li>
 					</ul>
 				</nav>
@@ -85,14 +85,18 @@
 								<legend>Стоимость, &#8381;:</legend>
 								<label>
 									<span class="visually-hidden">Минимальная стоимость:</span>
-									<input type="text" name="min-cost" placeholder="от">                        	
+									<input type="number" name="min-cost" placeholder="от">                        	
 								</label>
 								<label>
 									<span class="visually-hidden">Максимальная стоимость:</span>
-									<input type="text" name="max-cost" placeholder="до">                        	
+									<input type="number" name="max-cost" placeholder="до">                        	
 								</label>
-								<input type="range" min="0" max="10000" step="1000" value="0" name="cost-min-input" id="cost-min-input">
-								<input type="range" min="0" max="10000" step="1000" value="9000" name="cost-max-input" id="cost-max-input">
+								<button class="cost-toggle min-cost-toggle type="button">
+									<span class="visually-hidden">Изменить минимальную стоимость.</span>
+								</button>
+								<button class="cost-toggle max-cost-toggle type="button">
+									<span class="visually-hidden">Изменить максимальную стоимость.</span>
+								</button>
 							</fieldset>
 							<div class="filter-fieldset filter-button-wrapper">
 								<button class="filter-button filter-submit" type="submit">Применить</button>
@@ -233,7 +237,7 @@
 				<section class="subscribe catalog-subscribe">
 					<h2>Подпишитесь на рассылку</h2>
 					<p>Только полезная информация и никакого спама,	честное бойскаутское!</p>
-					<form action="https://echo.htmlacademy.ru" method="POST">
+					<form class="subscribe-form" action="https://echo.htmlacademy.ru" method="POST">
 						<input class="subscribe-email" type="email" name="email" placeholder="Ваш e-mail">
 						<button class="subscribe-submit" type="submit">Подписаться</button>	
 					</form>
