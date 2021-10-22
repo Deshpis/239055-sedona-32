@@ -103,8 +103,12 @@ img {
   padding-left: 0;
 }
 
-.main-nav-link:hover {
+.main-nav-link[href]:hover {
   color: #756257;
+}
+
+.main-nav-link[href]:active {
+  opacity: 0.3;
 }
 
 .main-nav-link-active {
@@ -855,8 +859,6 @@ h1 {
 }
 
 /* Стили для .list-of-hotels */
-
-Рабочий вариант стилей на флексах. Раскомментировать, если понадобится. 
 
 .list-of-hotels article {
   padding-top: 28px;
