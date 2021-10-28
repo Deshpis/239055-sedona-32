@@ -63,8 +63,8 @@ img {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding-left: 71px;
-  padding-right: 71px;
+  padding-left: 54px;
+  padding-right: 72px;
   background-color: #ffffff;
   color: #000000;
 }
@@ -74,6 +74,10 @@ img {
   left: 50%;
   margin-left: -69px;
   z-index: 1;
+}
+
+.logo-link:focus {
+  outline: 3px solid #83B3D3;
 }
 
 .main-nav-list {
@@ -87,46 +91,42 @@ img {
 }
 
 .main-nav-link {
-  padding-top: 18px;
-  padding-bottom: 21px;
-  padding-right: 17px;
-  padding-left: 17px;
+  margin: 12px 5px;
+  margin-bottom: 15px;
+  padding: 6px 12px;
+  position: relative;
   display: block;
   font-size: 20px;
   line-height: normal;
   font-weight: 700;
   text-decoration: none;
   color: #000000;
-}
-
-.main-nav-item:first-of-type .main-nav-link {
-  padding-left: 0;
+  border-radius: 10px;
 }
 
 .main-nav-link[href]:hover {
   color: #756257;
 }
 
-.main-nav-link[href]:active {
-  opacity: 0.3;
+.main-nav-link[href]:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
 }
 
-.main-nav-link-active {
-  position: relative;
+.main-nav-link[href]:active {
+  outline: none;
+  opacity: 0.3;
 }
 
 .main-nav-link-active::after {
   position: absolute;
   content: "";
   height: 2px;
-  bottom: -1px;
-  left: 14px;
-  right: 14px;
+  bottom: -16px;
+  left: 12px;
+  right: 12px;
   background-color: #756257;
-}
-
-.main-nav-item:first-of-type .main-nav-link-active::after {
-  left: 0;
+  z-index: 1;
 }
 
 .user-tools {
@@ -142,11 +142,34 @@ img {
 }
 
 .user-tools-item {
-  margin-left: 21px;
-  padding-top: 24px;
-  padding-bottom: 18px;
+  margin-top: 14px;
+  margin-bottom: 13px;
+  padding: 10px;
   display: block;
   text-decoration: none;
+  border-radius: 10px;
+  line-height: 0;
+}
+
+.user-tools-item svg {
+  fill: #000000;
+}
+
+.user-tools-item:hover svg {
+  fill: #756257;
+}
+
+.user-tools-item:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.user-tools-item:active {
+  outline: none;
+}
+
+.user-tools-item:active svg {
+  opacity: 0.3;
 }
 
 .user-favourites {
@@ -155,8 +178,8 @@ img {
 
 .favourites-count {
   position: absolute;
-  top: 14px;
-  right: -13px;
+  top: 0;
+  right: -3px;
   width: 19px;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -169,10 +192,13 @@ img {
   border-radius: 50%;
 }
 
+.user-favourites:active .opacity-active {
+  outline: none;
+  opacity: 0.3;
+}
+
 .user-catalog {
-  margin-top: 14px;
-  margin-bottom: 14px;
-  margin-left: 34px;
+  margin-left: 23px;
   padding-top: 7px;
   padding-right: 34px;
   padding-bottom: 9px;
@@ -185,6 +211,18 @@ img {
   border-radius: 4px;
 }
 
+.user-catalog:hover {
+  background-color: #615048;
+}
+
+.user-catalog:focus {
+  outline-offset: 0;
+}
+
+.user-catalog:active .opacity-active {
+  outline: none;
+  opacity: 0.3;
+}
 
 /* Стили для .promo */
 
@@ -435,6 +473,23 @@ img {
   border-radius: 10px;
 }
 
+.hotel-search-btn:hover {
+  background-color: #615048;
+}
+
+.hotel-search-btn:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.hotel-search-btn:active {
+  outline: none;
+}
+
+.hotel-search-btn:active .opacity-active {
+  opacity: 0.3;
+}
+
 /* Стили для .subscribe */
 
 .subscribe {
@@ -486,6 +541,27 @@ img {
   border-radius: 10px 0px 0px 10px;
 }
 
+.subscribe-email:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-email:focus {
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.subscribe-email:not(:placeholder-shown) {
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+  background-color: #FFFFFF;
+}
+
+.subscribe-email.email-error {
+  outline: 2px solid #FF5757;
+  outline-offset: -2px;
+  background-color: #FFFFFF;
+}
+
 .subscribe-submit {
   padding-top: 17px;
   padding-right: 34px;
@@ -502,6 +578,20 @@ img {
   background-color: #83B3D3;
   border: none;
   border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+
+.subscribe-submit:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-submit:focus {
+  outline: 3px solid #756257;
+}
+
+.subscribe-submit:active .opacity-active {
+  outline: none;
+  opacity: 0.3;
 }
 
 /* Переопределение стилей для .catalog-subscribe */
@@ -514,10 +604,10 @@ img {
 /* Стили для .main-footer */
 
 .main-footer {
-  padding-top: 40px;
-  padding-right: 72px;
+  padding-top: 21px;
+  padding-right: 50px;
   padding-bottom: 30px;
-  padding-left: 72px;
+  padding-left: 61px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -525,29 +615,66 @@ img {
 
 .social-list {
   margin: 0;
+  margin-top: 3px;
   padding: 0;
-  width: 110px;
+  width: 128px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
 
 .social-item {
-  margin-right: 29px;
-  margin-bottom: 5px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+
+.social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.social-link svg {
+  fill: #83B3D3;
+}
+
+.social-link:hover svg {
+  fill: #68A2CA;
+}
+
+.social-link:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.social-link:active {
+  outline: none;
+}
+
+.social-link:active svg {
+  opacity: 0.3;
 }
 
 .social-icon-tw {
+  margin-top: 12px;
   width: 18px;
   height: 15px;
 }
 
 .social-icon-fb {
+  margin-top: 11px;
   width: 10px;
   height: 18px;
 }
 
 .social-icon-inst {
+  margin-top: 12px;
   width: 20px;
   height: 16px;
 }
@@ -557,19 +684,58 @@ img {
 }
 
 .contact-phone {
-  margin-left: 59px;
-  width: 720px;
+  margin: 0 auto;
+  margin-left: 231px;
+  padding: 15px;
   text-decoration: none;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
+  border-radius: 10px;
+}
+
+.contact-phone:hover {
+  color: #756257;
+}
+
+.contact-phone:focus {
+  color: #756257;
+  outline: 3px solid #83B3D3;
+}
+
+.contact-phone:active {
+  color: #756257;
+  outline: none;
+  opacity: 0.3;
 }
 
 .copyright {
-  margin-left: auto;
-  width: 115px;
+  margin-top: 4px;
+  padding: 18px 22px;
+  border-radius: 10px;
+}
+
+.logo-academy {
+  fill: #000000;
+}
+
+.copyright:hover .logo-academy {
+  fill: #756257;
+}
+
+.copyright:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.copyright:focus .logo-academy {
+  fill: #756257;
+}
+
+.copyright:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 /* Стили для catalog.html */
@@ -877,7 +1043,7 @@ h1 {
 
 .description-column {
   margin-left: 37px;
-  width: 319px;
+  width: 625px;
 }
 
 .description-column h3 {
