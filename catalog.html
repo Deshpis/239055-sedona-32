@@ -30,13 +30,50 @@
 						</svg>
 						<span class="visually-hidden">Поиск</span>
 					</a>
-					<a class="user-tools-item user-favourites" href="#">
-						<svg aria-hidden="true" focusable="false" width="18" height="17" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
-						</svg>
-						<span class="visually-hidden">Избранное:</span><div class="favourites-count"><span class="opacity-active">12</span></div>
-					</a>
-					<a class="user-tools-item user-catalog" href="#"><span class="opacity-active">Хочу сюда!</span></a>
+					<div class="popover-wrapper">
+						<a class="user-tools-item user-favourites" href="#">
+							<svg aria-hidden="true" focusable="false" width="18" height="17" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.9 17a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 5.5 0C6.8 0 8 .5 9 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+							</svg>
+							<span class="visually-hidden">Избранное:</span><div class="favourites-count">12</div>
+						</a>
+						<div class="popover popover-favourites">
+							<ul class="popover-favourites-list">
+								<li class="popover-favourites-item">
+									<a class="popover-favourites-outline" href="#">
+										<div class="popover-favourites-image">
+											<img src="./image/content/small-desert-quail-inn.png" width="48" height="48" alt="Мотель Desert Quail Inn.">
+										</div>
+										<div class="popover-favourites-description">
+											<h3>Desert Quail Inn</h3>
+											<span>Мотель</span>
+										</div>
+									</a>
+									<button class="popover-favourites-del" type="button">
+										<span class="visually-hidden">Удалить из избранного</span>
+									</button>
+								</li>
+								<li class="popover-favourites-item">
+									<div class="popover-favourites-outline">
+										<div class="popover-favourites-image">
+											<a href="#">
+												<img src="./image/content/small-villas-at-poco-diablo.png" width="48" height="48" alt="Мотель Desert Quail Inn.">
+											</a>
+										</div>
+										<div class="popover-favourites-description">
+											<h3><a href="#">Villas at Poco Diablo</a></h3>
+											<span>Апартаменты</span>
+										</div>
+									</div>
+									<button class="popover-favourites-del" type="button">
+										<span class="visually-hidden">Удалить из избранного</span>
+									</button>
+								</li>
+							</ul>
+							<a class="popover-favourites-all" href="#">Все избранные</a>
+						</div>
+					</div>
+					<a class="user-tools-item user-catalog" href="#">Хочу сюда!</a>
 				</div>
 			</header>
 			<main  class="main-container">
@@ -114,7 +151,7 @@
 								</div>
 							</fieldset>
 							<div class="filter-fieldset filter-button-wrapper">
-								<button class="filter-button filter-submit" type="submit"><span class="opacity-active">Применить</span></button>
+								<button class="filter-button filter-submit" type="submit">Применить</button>
 								<button class="filter-button filter-reset" type="reset">Сбросить</button>
 							</div>
 						</form>
@@ -125,13 +162,11 @@
 					<div class="sorting">
 						<p>Найдено гостиниц: <span class="quantity">38</span></p>
 						<form class="sort-list" action="https://echo.htmlacademy.ru" method="GET">
-							<div class="select-wrapper">
-								<select name="sort">
-									<option value="low-cost">Сначала дешевые</option>
-									<option value="costly">Сначала дорогие</option>
-									<option value="high-rating">С высоким рейтингом</option>							
-								</select>
-							</div>
+							<select name="sort">
+								<option value="low-cost">Сначала дешевые</option>
+								<option value="costly">Сначала дорогие</option>
+								<option value="high-rating">С высоким рейтингом</option>							
+							</select>
 							<div class="display-mode">
 								<a class="display-mode-btn btn-view-line" href="#"><span class="visually-hidden">Вывести результат строкой</span></a>
 								<a class="display-mode-btn btn-view-column" href="#"><span class="visually-hidden">Вывести результат в столбце</span></a>
@@ -139,7 +174,7 @@
 							</div>
 						</form>
 					</div>
-					<section class="list-of-hotels">
+					<div class="list-of-hotels">
 						<h2 class="visually-hidden">Гостиницы по Вашим предпочтениям</h2>
 						<article>
 							<div class="image-column">
@@ -152,13 +187,11 @@
 								<div class="hotels-column-wrapper">
 									<div class="hotels-left-column">
 										<span class="type">Гостиница</span>
-										<a class="more-details" href="#"><span class="opacity-active">Подробнее</span></a>
+										<a class="more-details" href="#">Подробнее</a>
 									</div>
 									<div class="hotels-right-column">
 										<span class="cost">От 4000 &#8381;</span>
-										<button class="hotels-favourites" type="button" name="add-to-favorites">
-											<span class="opacity-active">В избранное</span>
-										</button>
+										<button class="hotels-favourites" type="button" name="add-to-favorites">В избранное</button>
 									</div>
 								</div>
 							</div>
@@ -184,13 +217,11 @@
 								<div class="hotels-column-wrapper">
 									<div class="hotels-left-column">
 										<span class="type">Мотель</span>
-										<a class="more-details" href="#"><span class="opacity-active">Подробнее</span></a>
+										<a class="more-details" href="#">Подробнее</a>
 									</div>
 									<div class="hotels-right-column">
 										<span class="cost">От 3000 &#8381;</span>
-										<button class="hotels-favourites" type="button" name="add-to-favorites">
-											<span class="opacity-active">В избранное</span>
-										</button>
+										<button class="hotels-favourites" type="button" name="add-to-favorites">В избранное</button>
 									</div>
 								</div>							
 							</div>
@@ -215,13 +246,11 @@
 								<div class="hotels-column-wrapper">
 									<div class="hotels-left-column">
 										<span class="type">Апартаменты</span>
-								<a class="more-details" href="#"><span class="opacity-active">Подробнее</span></a>
+								<a class="more-details" href="#">Подробнее</a>
 									</div>
 									<div class="hotels-right-column">
 										<span class="cost">От 2000 &#8381;</span>
-										<button class="hotels-favourites hotels-favourites-add" type="button" name="add-to-favorites">
-											<span class="opacity-active">В избранном</span>
-										</button>
+										<button class="hotels-favourites hotels-favourites-add" type="button" name="add-to-favorites">В избранном</button>
 									</div>
 								</div>
 							</div>
@@ -245,13 +274,11 @@
 								<div class="hotels-column-wrapper">
 									<div class="hotels-left-column">
 										<span class="type">Гостиница</span>
-										<a class="more-details" href="#"><span class="opacity-active">Подробнее</span></a>
+										<a class="more-details" href="#">Подробнее</a>
 									</div>
 									<div class="hotels-right-column">
 										<span class="cost">От 3000 &#8381;</span>
-										<button class="hotels-favourites" type="button" name="add-to-favorites">
-											<span class="opacity-active">В избранное</span>
-										</button>
+										<button class="hotels-favourites" type="button" name="add-to-favorites">В избранное</button>
 									</div>
 								</div>
 							</div>
@@ -265,27 +292,25 @@
 							</div>
 						</article>
 						<div class="hotels-more-wrapper">
-							<a class="hotels-more" href="#"><span class="opacity-active">Загрузить еще</span></a>
+							<a class="hotels-more" href="#">Загрузить еще</a>
 						</div>						
-					</section>
+					</div>
 					<div class="pagination-wrapper">
 						<ul class="pagination-list">
-							<li class="pagination-item"><a class="pagination-link pagination-link-current"><span class="opacity-active">1</span></a></li>
-							<li class="pagination-item"><a class="pagination-link" href="#"><span class="opacity-active">2</span></a></li>
-							<li class="pagination-item"><a class="pagination-link" href="#"><span class="opacity-active">3</span></a></li>
-							<li class="pagination-item"><a class="pagination-link" href="#"><span class="opacity-active">4</span></a></li>
-							<li class="pagination-item"><a class="pagination-link" href="#"><span class="opacity-active">...</span></a></li>
-							<li class="pagination-item"><a class="pagination-link" href="#"><span class="opacity-active">10</span></a></li>
+							<li class="pagination-item"><a class="pagination-link pagination-link-current">1</a></li>
+							<li class="pagination-item"><a class="pagination-link" href="#">2</a></li>
+							<li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+							<li class="pagination-item"><a class="pagination-link" href="#">4</a></li>
+							<li class="pagination-item"><a class="pagination-link" href="#">...</a></li>
+							<li class="pagination-item"><a class="pagination-link" href="#">10</a></li>
 						</ul>
 						<div class="quantity-hotels">
 							<span>Гостиниц на странице:</span>
-							<div class="select-wrapper">
-								<select name="quantity-hotels">
-									<option value="4">4</option>
-									<option value="6">6</option>
-									<option value="8">8</option>
-								</select>
-							</div>							
+							<select name="quantity-hotels">
+								<option value="4">4</option>
+								<option value="6">6</option>
+								<option value="8">8</option>
+							</select>
 						</div>
 					</div>
 				</section>
@@ -332,6 +357,73 @@
 					</svg>
 				</a>
 			</footer>
+		</div>
+		<div class="modal-container">
+			<div class="modal modal-hotel-search">
+				<button class="modal-close-btn">
+					<span class="visually-hidden">Закрыть</span>
+				</button>
+				<div class="modal-content">
+					<h2>Поиск гостиницы в Седоне</h2>
+					<form class="modal-form-search" action="https://echo.htmlacademy.ru" method="GET">
+						<div class="modal-date-wrapper">
+							<label for="date-in" class="modal-date">Дата заезда:</label>
+							<div class="input-date-wrapper">
+								<input id="date-in" class="modal-input-date" type="text" placeholder="Укажите дату" name="date-in" required>
+								<button class="modal-calendar" type="button">
+									<span class="visually-hidden">Открыть календарь</span>
+								</button>
+								<span class="modal-input-message message-error">Мы не можем отправить вас в прошлое.</span>
+							</div>
+						</div>
+						<div class="modal-date-wrapper">
+							<label for="date-out" class="modal-date">Дата выезда:</label>
+							<div class="input-date-wrapper">
+								<input id="date-out" class="modal-input-date" type="text" placeholder="Укажите дату" name="date-out" required>	
+								<button class="modal-calendar" type="button">
+									<span class="visually-hidden">Открыть календарь</span>
+								</button>
+								<span class="modal-input-message message-success">На эти даты есть свободные номера. Пока есть.</span>
+							</div>
+						</div>
+						<div class="guests-wrapper">
+							<div class="guests-inner">
+								<label for="adult" class="modal-adult">Взрослые:</label>
+								<div class="modal-input-guests">
+									<button class="modal-btn-guests guests-deduct" type="button">
+										<span class="visually-hidden">Убрать взрослого</span>
+									</button>
+									<button class="modal-btn-guests guests-add" type="button">
+										<span class="visually-hidden">Добавить взрослого</span>
+									</button>
+									<input id="adult" class="modal-input-adult" type="text" name="adult" placeholder="1">
+								</div>
+							</div>
+							<div class="guests-inner">
+								<label for="child" class="modal-child">Дети:</label>
+								<div class="modal-info-wrapper">
+									<button class="modal-child-info" type="button">
+										<span class="visually-hidden">Информация</span>
+									</button>
+									<div class="popover-child-info">
+										<p>Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+									</div>
+								</div>
+								<div class="modal-input-guests">
+									<button class="modal-btn-guests guests-deduct" type="button">
+										<span class="visually-hidden">Убрать ребёнка</span>
+									</button>
+									<button class="modal-btn-guests guests-add" type="button">
+										<span class="visually-hidden">Добавить ребёнка</span>
+									</button>									
+									<input id="child" class="modal-input-child" type="text" name="child" placeholder="0">
+								</div>
+							</div>
+						</div>						
+						<button class="modal-search-btn" type="submit">Найти</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
