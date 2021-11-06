@@ -148,7 +148,7 @@
 					<h2>Подпишитесь на рассылку</h2>
 					<p>Только полезная информация и никакого спама,	честное бойскаутское!</p>
 					<form class="subscribe-form" action="https://echo.htmlacademy.ru" method="POST">
-						<input class="subscribe-email" type="email" name="email" placeholder="Ваш e-mail" required>
+						<input class="subscribe-email" type="email" name="email" placeholder="Ваш e-mail">
 						<button class="subscribe-submit" type="submit">Подписаться</button>
 					</form>
 				</section>	
@@ -226,7 +226,7 @@
 									<button class="modal-btn-guests guests-add" type="button">
 										<span class="visually-hidden">Добавить взрослого</span>
 									</button>
-									<input id="adult" class="modal-input-adult" type="text" name="adult" placeholder="1">
+									<input id="adult" class="modal-input-adult" type="number" name="adult" min="1" max="99" placeholder="1">
 								</div>
 							</div>
 							<div class="guests-inner">
@@ -246,7 +246,7 @@
 									<button class="modal-btn-guests guests-add" type="button">
 										<span class="visually-hidden">Добавить ребёнка</span>
 									</button>									
-									<input id="child" class="modal-input-child" type="text" name="child" placeholder="0">
+									<input id="child" class="modal-input-child" type="number" name="child" min="0" max="99" placeholder="0">
 								</div>
 							</div>
 						</div>						

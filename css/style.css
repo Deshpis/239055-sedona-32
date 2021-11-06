@@ -109,6 +109,7 @@ img {
 }
 
 .main-nav-link[href]:focus {
+  color: #756257;
   outline: 3px solid #83B3D3;
   outline-offset: -3px;
 }
@@ -162,6 +163,10 @@ img {
 .user-tools-item:focus {
   outline: 3px solid #83B3D3;
   outline-offset: -3px;
+}
+
+.user-tools-item:focus svg {
+  fill: #756257;
 }
 
 .user-tools-item:active {
@@ -1770,7 +1775,7 @@ select:active {
 .modal {
   position: relative;
   margin: auto;
-  margin-top: 390px;
+  margin-top: 170px;
   padding: 70px;
   padding-top: 62px;
   box-sizing: border-box;
@@ -1950,6 +1955,7 @@ select:active {
 }
 
 .modal-btn-guests:focus {
+  opacity: 1;
   outline: 3px solid #83B3D3;
   outline-offset: -3px;
 }
@@ -1969,10 +1975,21 @@ select:active {
   background-image: url("../image/svg/plus.svg");
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .modal-input-adult,
 .modal-input-child {
   width: 133px;
   text-align: center;
+  appearance: none;
 }
 
 .modal-info-wrapper {
