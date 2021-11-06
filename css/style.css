@@ -201,6 +201,35 @@ img {
   border-radius: 50%;
 }
 
+.user-catalog {
+  margin-left: 23px;
+  padding-top: 7px;
+  padding-right: 34px;
+  padding-bottom: 9px;
+  padding-left: 34px;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: #756257;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.user-catalog:hover {
+  background-color: #615048;
+}
+
+.user-catalog:focus {
+  outline-offset: 0;
+}
+
+.user-catalog:active {
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Стили для .popover */
+
 .popover-wrapper {
   position: relative;
 }
@@ -346,8 +375,11 @@ img {
 }
 
 .popover-favourites .popover-favourites-all {
+  box-sizing: border-box;
   padding-top: 20px;
+  padding-right: 20px;
   padding-bottom: 19px;
+  padding-left: 20px;
   display: block;
   width: 100%;
   text-align: center;
@@ -373,33 +405,6 @@ img {
 
 .popover-favourites-all:active {
   background-color: #615048;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.user-catalog {
-  margin-left: 23px;
-  padding-top: 7px;
-  padding-right: 34px;
-  padding-bottom: 9px;
-  padding-left: 34px;
-  font-size: 16px;
-  line-height: 21px;
-  color: #ffffff;
-  background-color: #756257;
-  text-transform: uppercase;
-  border-radius: 4px;
-}
-
-.user-catalog:hover {
-  background-color: #615048;
-}
-
-.user-catalog:focus {
-  outline-offset: 0;
-}
-
-.user-catalog:active {
   outline: none;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -484,6 +489,7 @@ img {
   padding-bottom: 111px;
   padding-left: 75px;
   color: #333333;
+  word-wrap: break-word;
 }
 
 .features-item h3 {
@@ -620,6 +626,7 @@ img {
   padding-bottom: 91px;
   padding-left: 310px;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .hotel-search h2 {
@@ -643,7 +650,7 @@ img {
   display: block;
   padding-top: 13px;
   padding-bottom: 11px;
-  width: 575px;
+  width: 100%;
   font-weight: bold;
   font-size: 20px;
   line-height: 36px;
@@ -682,6 +689,7 @@ img {
   background-position: center;
   background-size: cover;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .subscribe h2 {
@@ -1009,8 +1017,6 @@ h1 {
   border-radius: 4px;
 }
 
-
-
 /* Стили для .filter */
 
 .filter {
@@ -1069,7 +1075,7 @@ h1 {
   line-height: 23px;
   color: #FFFFFF;
   background-color: transparent;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #FFFFFF;
 }
 
 .cost-input:hover {
@@ -1086,6 +1092,11 @@ h1 {
   outline: none;
   box-shadow: none;
   background-color: #756257;
+}
+
+.cost-input:disabled {
+  opacity: 0.6;
+  border-color: #FFFFFF;
 }
 
 .range label {
@@ -1152,6 +1163,10 @@ h1 {
 
 .cost-toggle:active {
   outline: 2px solid #83B3D3;
+}
+
+.cost-toggle:disabled {
+  background-color: #a9a9a9;
 }
 
 .min-cost-toggle {
@@ -1235,6 +1250,11 @@ h1 {
 .filter-housing input:focus + .custom-radio {
   opacity: 0.6;
   outline: 3px solid #83B3D3;
+}
+
+.filter-infrastructure input:disabled + .custom-check,
+.filter-housing input:disabled + .custom-radio {
+  opacity: 0.6;
 }
 
 .filter-button-wrapper {
@@ -1444,6 +1464,12 @@ select:active {
   opacity: 0.3;
 }
 
+.image-column a {
+  display: block;
+  width: 180px;
+  height: 120px;
+}
+
 .description-column {
   margin-left: 37px;
   width: 625px;
@@ -1468,6 +1494,7 @@ select:active {
 }
 
 .description-column a:focus {
+  color: #756257;
   outline: 3px solid #83B3D3;
 }
 
@@ -1557,8 +1584,9 @@ select:active {
   color: #FFFFFF;
 }
 
-.more-details:focus {
+.description-column .more-details:focus {
   outline-offset: -1px;
+  color: #FFFFFF;
 }
 
 .description-column .more-details:active {
@@ -1760,6 +1788,8 @@ select:active {
   color: #E6E6E6;
 }
 
+/* Стили для .modal */
+
 .modal-container {
   position: fixed;
   top: 0;
@@ -1772,10 +1802,14 @@ select:active {
   display: none;
 }
 
+.modal-container-show {
+  display: block;
+}
+
 .modal {
   position: relative;
   margin: auto;
-  margin-top: 170px;
+  top: 390px;
   padding: 70px;
   padding-top: 62px;
   box-sizing: border-box;
@@ -2095,4 +2129,3 @@ input[type=number] {
   outline: none;
   color: rgba(255, 255, 255, 0.3);
 }
-
