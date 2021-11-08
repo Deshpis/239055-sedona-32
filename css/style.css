@@ -1477,12 +1477,18 @@ body {
   width: 625px;
 }
 
-.description-column h3 {
+.hotel-name {
   margin: 0;
   font-weight: bold;
   font-size: 24px;
   line-height: 31px;
   color: #000000;
+}
+
+.hotel-name a {
+  position: relative;
+  padding: 0 15px;
+  left: -15px;
 }
 
 .description-column a {
@@ -1625,7 +1631,7 @@ body {
 
 .hotels-favourites:hover {
   background-color: #68A2CA;
-  border: 1px solid #756257;
+  outline: 1px solid #756257;
 }
 
 .hotels-favourites:focus {
@@ -1634,7 +1640,7 @@ body {
 }
 
 .hotels-favourites:active {
-  outline: none;
+  outline: 1px solid #756257;
   color: rgba(255, 255, 255, 0.3);
 }
 
