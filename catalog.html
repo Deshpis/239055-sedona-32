@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
-		<link rel="icon" href="favicon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 		<title>Гостиницы Седоны</title>
 	</head>
 	<body>
@@ -78,7 +78,7 @@
 			</header>
 			<main  class="main-container">
 				<div class="catalog-head-wrapper">
-					<h1>Гостиницы Седоны</h1>
+					<h1 class="catalog-header">Гостиницы Седоны</h1>
 					<ul class="breadcrumbs-list">
 						<li class="breadcrumbs-item"><a class="breadcrumbs-link breadcrumbs-home" href="index.html"><span class="visually-hidden">Главная</span></a></li>
 						<li class="breadcrumbs-item"><a class="breadcrumbs-link">Гостиницы</a></li>
@@ -162,7 +162,7 @@
 					<div class="sorting">
 						<p>Найдено гостиниц: <span class="quantity">38</span></p>
 						<form class="sort-list" action="https://echo.htmlacademy.ru" method="GET">
-							<select name="sort">
+							<select class="select sorting-select" name="sort">
 								<option value="low-cost">Сначала дешевые</option>
 								<option value="costly">Сначала дорогие</option>
 								<option value="high-rating">С высоким рейтингом</option>							
@@ -306,7 +306,7 @@
 						</ul>
 						<div class="quantity-hotels">
 							<span>Гостиниц на странице:</span>
-							<select name="quantity-hotels">
+							<select class="select quantity-hotels-select" name="quantity-hotels">
 								<option value="4">4</option>
 								<option value="6">6</option>
 								<option value="8">8</option>

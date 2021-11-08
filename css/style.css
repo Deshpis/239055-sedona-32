@@ -38,10 +38,6 @@ body {
   background-color: #F2F2F2;
 }
 
-img {
-  display: block;
-}
-
 .body-inner {
   box-sizing: border-box;
   margin: 0 auto;
@@ -271,7 +267,6 @@ img {
 }
 
 .popover-favourites a {
-  font-family: inherit;
   text-decoration: none;
   color: #000000;
 }
@@ -540,6 +535,10 @@ img {
   width: 800px;
 }
 
+.features-image {
+  display: block;
+}
+
 .features-bridge .features-left-column {
   order: 1;
 }
@@ -718,7 +717,7 @@ img {
   padding-left: 22px;
   flex-grow: 1;
   background: #F2F2F2;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
   align-items: center;
@@ -754,7 +753,7 @@ img {
   padding-bottom: 17px;
   padding-left: 34px;
   flex-basis: 200px;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
@@ -941,7 +940,7 @@ img {
   background-position: center;
 }
 
-h1 {
+.catalog-header {
   margin: 0;
   font-weight: bold;
   font-size: 60px;
@@ -1070,7 +1069,7 @@ h1 {
   padding-left: 17px;
   width: 144px;
   height: 48px;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
@@ -1268,11 +1267,12 @@ h1 {
 }
 
 .filter-submit {
+  box-sizing: border-box;
   margin-bottom: 13px;
-  padding: 0;
+  padding: 13px 34px;
   width: 160px;
-  height: 48px;
-  font-family: inherit;
+  min-height: 48px;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
@@ -1281,6 +1281,7 @@ h1 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 .filter-submit:hover {
@@ -1299,15 +1300,16 @@ h1 {
 .filter-reset {
   padding: 0;
   width: 97px;
-  height: 29px;
+  min-height: 29px;
   background-color: transparent;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 23px;
   color: #ffffff;
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  word-wrap: break-word;
 }
 
 .filter-reset:hover {
@@ -1332,7 +1334,7 @@ h1 {
 }
 
 .sorting {
-  padding-bottom: 40px;
+  padding-bottom: 42px;
   display: flex;
   justify-content: space-between;
 }
@@ -1350,7 +1352,7 @@ h1 {
   display: flex;
 }
 
-select {
+.select {
   box-sizing: border-box;
   height: 48px;
   appearance: none;
@@ -1359,24 +1361,24 @@ select {
   background-position: right 19px center; 
   border: 2px solid #E6E6E6;
   border-radius: 4px;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 23px;
   color: #333333;
 }
 
-select:hover,
-select:focus {
+.select:hover,
+.select:focus {
   outline: none;
   border-color: #83B3D3;
 }
 
-select:active {
+.select:active {
   border-color: #E6E6E6;
   color: #E6E6E6;
 }
 
-.sort-list select {
+.sorting-select {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 15px;
@@ -1385,15 +1387,15 @@ select:active {
 }
 
 .display-mode {
-  margin-left: 80px;
+  margin-left: 82px;
   display: flex;  
 }
 
 .display-mode-btn {
-  margin-right: 6px;
+  margin-right: 8px;
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
 }
@@ -1564,12 +1566,14 @@ select:active {
 }
 
 .description-column .more-details {
+  box-sizing: border-box;
   margin-top: 33px;
   padding: 8px 26px;
+  width: 151px;
+  min-height: 37px;
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756257;
-  font-family: inherit;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -1577,6 +1581,7 @@ select:active {
   text-align: center;
   text-transform: uppercase;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .description-column .more-details:hover {
@@ -1596,19 +1601,22 @@ select:active {
 }
 
 .hotels-favourites {
+  box-sizing: border-box;
   margin-top: 33px;
+  padding: 8px 26px;
   width: 160px;
-  height: 37px;
+  min-height: 37px;
   color: #ffffff;
   background-color: #83B3D3;
   border-radius: 4px;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  word-wrap: break-word;
 }
 
 .hotels-favourites-add {
@@ -1664,8 +1672,10 @@ select:active {
 }
 
 .hotels-more {
-  padding: 14px 240px;
+  box-sizing: border-box;
+  padding: 14px 100px;
   display: inline-block;
+  width: 625px;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
@@ -1725,8 +1735,7 @@ select:active {
 
 .pagination-link {
   display: block;
-  padding-top: 15px;
-  padding-bottom: 14px;
+  padding: 15px;
   color: #ffffff;
   text-decoration: none;  
   background-color: #83B3D3;
@@ -1769,23 +1778,12 @@ select:active {
   color: #333333;
 }
 
-.quantity-hotels select {
+.quantity-hotels-select {
   padding-top: 9px;
   padding-right: 20px;
   padding-bottom: 13px;
   padding-left: 15px;
   width: 160px;
-}
-
-.quantity-hotels select:hover,
-.quantity-hotels select:focus {
-  outline: none;
-  border-color: #83B3D3;
-}
-
-.quantity-hotels select:active {
-  border-color: #E6E6E6;
-  color: #E6E6E6;
 }
 
 /* Стили для .modal */
@@ -1826,7 +1824,7 @@ select:active {
   appearance: none;
   border-radius: 4px;
   background-color: #F2F2F2;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 40px;
@@ -2073,7 +2071,7 @@ input[type=number] {
   margin-left: -128px;
   background-color: #333333;
   color: #FFFFFF;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -2107,7 +2105,7 @@ input[type=number] {
   border: none;
   background-color: #83B3D3;
   border-radius: 5px;
-  font-family: inherit;
+  font-family: "PT Sans", sans-serif;
   font-weight: bold;
   font-size: 20px;
   line-height: 40px;
