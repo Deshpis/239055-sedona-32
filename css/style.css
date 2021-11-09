@@ -996,7 +996,6 @@ body {
   outline-offset: -3px;
 }
 
-
 .breadcrumbs-home {
   position: relative;
   padding-left: 20px;
@@ -1727,7 +1726,6 @@ body {
 
 .pagination-item {
   width: 100%;  
-  font-weight: bold;
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
